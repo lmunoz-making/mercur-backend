@@ -1,7 +1,7 @@
 FROM node:lts-alpine 
 RUN corepack enable 
 RUN corepack prepare yarn@stable --activate
-RUN npm set registry http://host.docker.internal:4873
+RUN npm set registry http://172.17.0.1:4873
 WORKDIR /app
 COPY . .
 

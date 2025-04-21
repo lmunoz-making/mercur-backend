@@ -20,7 +20,7 @@ RUN turbo prune api --docker
 FROM base AS installer
 RUN apk update
 RUN apk add --no-cache libc6-compat
-RUN yarn config set registry http://host.docker.internal:4873
+RUN yarn config set registry http://172.17.0.1:4873
 WORKDIR /app
 
 # First install dependencies (as they change less often)
