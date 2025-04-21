@@ -1,0 +1,16 @@
+{
+  "name": "@mercurjs/http-client",
+  "types": "./dist/index.d.ts",
+  "version": "0.0.1",
+  "private": true,
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "npx tsc",
+    "codegen": "npx swagger-typescript-api generate --path ../../apps/backend/combined.oas.json --output ./src -n index.ts --client axios --union-enums --single-http-client --extract-request-params && npx tsc"
+  },
+  "dependencies": {
+    "swagger-typescript-api": "^13.0.23"
+  }
+}

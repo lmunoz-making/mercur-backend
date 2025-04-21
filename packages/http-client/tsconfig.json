@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "lib": ["ES2021", "DOM"],
+    "target": "ES2021",
+    "outDir": "dist",
+    "esModuleInterop": true,
+    "declaration": true,
+    "declarationMap": true,
+    "noUnusedLocals": true,
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "noImplicitReturns": true,
+    "resolveJsonModule": true,
+    "forceConsistentCasingInFileNames": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "noImplicitThis": true,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "incremental": false,
+
+    // Ajustes adicionales para mejorar la gestión de tipos
+    "maxNodeModuleJsDepth": 10 // Aumenta la profundidad máxima de los módulos JS
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "codegen"]
+}

@@ -1,0 +1,9 @@
+FROM node:lts-alpine 
+RUN corepack enable 
+RUN corepack prepare yarn@stable --activate
+RUN npm set registry http://host.docker.internal:4873
+WORKDIR /app
+COPY . .
+
+CMD ["tail", "-f", "/dev/null"]
+
