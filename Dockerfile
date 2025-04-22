@@ -53,8 +53,7 @@ RUN chown -R medusa:medusa /app/apps/backend
 USER medusa
 COPY --from=installer /app .
 
-WORKDIR /app/apps/backend
+WORKDIR /app
 
 # RUN yarn db:migrate
-
-CMD ["yarn", "start"]
+CMD ["yarn", "workspace","api","start"]
